@@ -1,6 +1,8 @@
-body{
- background-color: cadetblue;
+/* Default styles */
+body {
+    background-color: cadetblue;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -8,34 +10,68 @@ body{
     justify-content: center;
     height: 100vh;
     font-family: sans-serif;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-  }
-  
-  input {
+}
+
+input {
     padding: 0.5rem;
     border-radius: 0.25rem;
     border: 1px solid #ccc;
     margin-right: 0.5rem;
-  }
-  
-  button {
+}
+
+button {
     padding: 0.5rem;
     border-radius: 0.25rem;
     border: none;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-  }
-  
-  .result {
+}
+
+.result {
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    /* For screens smaller than 768px */
+    input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* For screens larger than 768px */
+    .container {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 70%;
+        margin-right: 0.5rem;
+    }
+
+    button {
+        width: 30%;
+    }
+}
